@@ -5,9 +5,179 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
-  font-family: sans-serif;
+  font-family: "Rubik", sans-serif;
   line-height: 1;
   font-weight: 400;
+  color: var(--main-text-color);
+}
+
+/* ----------------- COLORS ----------------- */
+
+:root {
+  --section-background: #deceee;
+  --primary-color: #590aa8;
+  --main-text-color: #333;
+}
+
+/* ----------------- USABLE COMPONENTS ----------------- */
+
+.margin-right-sm {
+  margin-right: 2rem !important;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  background-color: var(--primary-color);
+  border-radius: 15px;
+  padding: 1.4rem 3.2rem;
+  font-size: 2rem;
+  color: white;
+  font-weight: 600;
+  transition: all 0.4s;
+}
+
+.btn--full:link,
+.btn--full:visited {
+  background-color: var(--primary-color);
+}
+
+.btn--full:hover,
+.btn--full:active {
+  background-color: #3e0776;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  background-color: var(--section-background);
   color: #555;
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: var(--section-background);
+  box-shadow: inset 0 0 10px #fff;
+}
+
+/* ----------------- HEADER ----------------- */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--section-background);
+  height: 12rem;
+  padding: 0 4.8rem;
+}
+
+.logo {
+  height: 12rem;
+  border-radius: 4rem;
+}
+
+/* ----------------- NAVBAR ----------------- */
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 3.5rem;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  display: inline-block;
+  color: var(--main-text-color);
+  font-weight: 500;
+  font-size: 2rem;
+  transition: all 0.3s;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  color: #3e0776;
+}
+
+.nav-link.nav-contact:link,
+.nav-link.nav-contact:visited {
+  padding: 2rem, 3rem;
+  border-radius: 9px;
+  color: white;
+  background-color: var(--primary-color);
+}
+
+.nav-link.nav-contact:hover,
+.nav-link.nav-contact:active {
+  background-color: #3e0776;
+}
+
+/* ----------------- PRIME SCETION ----------------- */
+
+.section-prime {
+  background-color: var(--section-background);
+  padding: 5rem 0 10rem 0;
+}
+
+.prime {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  display: grid;
+  gap: 9.6rem;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.heading-primary {
+  font-size: 6.2rem;
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--main-text-color);
+  margin-bottom: 3.2rem;
+}
+
+.prime-description {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4rem;
+}
+
+.name-text {
+  display: inline-block;
+  margin-right: 1.5rem;
+  background-color: #7a3bb9;
+  border-radius: 2rem;
+  padding: 0.6rem;
+}
+
+.prime-img {
+  width: 100%;
+  border-radius: 1000px;
+}
+
+.social-media-container {
+  display: flex;
+  gap: 4rem;
+  margin-top: 6rem;
+  height: 6rem;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.social-media-icon {
+  font-size: 5rem;
+  color: var(--primary-color);
+  transition: all 0.2s ease;
+}
+
+.social-media-icon:hover,
+.social-media-icon:active {
+  font-size: 6rem;
 }

@@ -1,0 +1,75 @@
+/* ----------------- COLORS ----------------- */
+
+:root {
+  --section-background: black;
+  --primary-color: #590aa8;
+  --main-text-color: #e7e3e3;
+}
+
+/* ----------------- USABLE COMPONENTS ----------------- */
+
+.margin-right-sm {
+  margin-right: 2rem !important;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  background-color: var(--primary-color);
+  border-radius: 15px;
+  padding: 1.4rem 3.2rem;
+  font-size: 2rem;
+  color: white;
+  font-weight: 600;
+  transition: all 0.4s;
+}
+
+.btn--full:link,
+.btn--full:visited {
+  background-color: var(--primary-color);
+}
+
+.btn--full:hover,
+.btn--full:active {
+  background-color: #3e0776;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  background-color: var(--section-background);
+  color: #555;
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: var(--section-background);
+  box-shadow: inset 0 0 10px #fff;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.grid {
+  display: grid;
+  gap: 9.6rem;
+  column-gap: 6rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--center-v {
+  align-items: center;
+}

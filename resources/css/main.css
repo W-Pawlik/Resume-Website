@@ -145,6 +145,41 @@ body {
   font-size: 6rem;
 }
 
+/* ----------------- MY STACK SECTION ----------------- */
+
+.section-my-stack {
+  padding: 5rem 0;
+}
+
+.stack-title {
+  font-size: 4.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  font-weight: 500;
+  margin-bottom: 4rem;
+  text-align: center;
+  color: var(--main-text-color);
+}
+
+.logos {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.logo:link,
+.logo:visited {
+  width: 20rem;
+  text-align: center;
+  font-size: 10rem;
+  transition: all 0.2s ease;
+}
+
+.logo:hover,
+.logo:active {
+  font-size: 12rem;
+}
+
 /* ----------------- MY PROJECTS SCETION ----------------- */
 
 .section-my-projects {

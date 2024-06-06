@@ -283,3 +283,38 @@ body {
   font-size: 3rem;
   text-shadow: 0px 0px 50px rgba(62, 7, 118, 1);
 }
+
+.download-cv-btn {
+  margin-top: 2rem;
+  font-size: 2rem;
+  text-align: center;
+  align-self: start;
+}
+
+/* ----------------- FOOTER ----------------- */
+
+.footer {
+  border-top: solid 1px grey;
+  padding: 4rem 0 2rem 0;
+}
+
+.social-media-container-footer {
+  display: flex;
+  gap: 2rem;
+}
+
+.social-media-icon-footer {
+  color: var(--main-text-color);
+  font-size: 4rem;
+}
+
+.footer-logo {
+  width: 12rem;
+  border-radius: 20px;
+}
+
+.copyright-text {
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 0.15rem;
+}

@@ -56,6 +56,7 @@
   display: grid;
   gap: 9.6rem;
   column-gap: 6rem;
+  row-gap: 8rem;
 }
 
 .grid--2-cols {

@@ -78,3 +78,20 @@
 .grid--center-h {
   justify-items: center;
 }
+
+.button {
+  justify-self: center;
+  margin-top: 1rem;
+  background-color: #8b54c2;
+  padding: 1.2rem;
+  color: var(--main-text-color);
+  border-radius: 15px;
+  border: solid 2px #a29f9f;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.button:hover {
+  background-color: #30114e;
+  /* background-color: #6a23b1; */
+}

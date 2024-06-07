@@ -8,6 +8,7 @@
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -16,6 +17,7 @@ body {
   font-weight: 400;
   color: var(--main-text-color);
   background-color: rgb(51, 48, 48);
+  overflow-x: hidden;
 }
 
 /* ----------------- COLORS ----------------- */
@@ -38,6 +40,7 @@ body {
   -webkit-box-shadow: inset -3px -32px 100px -30px rgba(62, 7, 118, 1);
   -moz-box-shadow: inset -3px -32px 100px -30px rgba(62, 7, 118, 1);
   box-shadow: inset -3px -32px 100px -30px rgba(62, 7, 118, 1);
+  position: relative;
 }
 
 .logo {
@@ -81,6 +84,26 @@ body {
 .nav-contact:active {
   background-color: #3e0776;
   color: #d3d0d3;
+}
+
+/* ----------------- MOBILE NAV ----------------- */
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: none;
+}
+
+.icon-mobile-nav {
+  font-size: 3rem;
+  color: var(--main-text-color);
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  /* display: none; */
+  opacity: 0;
 }
 
 /* ----------------- PRIME SCETION ----------------- */
@@ -341,34 +364,6 @@ body {
   text-shadow: 0px 0px 50px rgba(62, 7, 118, 1);
 }
 
-/* ----------------- FOOTER ----------------- */
-
-.footer {
-  border-top: solid 1px grey;
-  padding: 4rem 0 2rem 0;
-}
-
-.social-media-container-footer {
-  display: flex;
-  gap: 2rem;
-}
-
-.social-media-icon-footer {
-  color: var(--main-text-color);
-  font-size: 4rem;
-}
-
-.footer-logo {
-  width: 12rem;
-  border-radius: 20px;
-}
-
-.copyright-text {
-  font-size: 1.3rem;
-  font-weight: 400;
-  letter-spacing: 0.15rem;
-}
-
 /* ----------------- CONTACCT ME SECTION ----------------- */
 
 .contact-me-section {
@@ -463,4 +458,32 @@ body {
   text-wrap: wrap;
   border-radius: 6px;
   padding: 2rem;
+}
+
+/* ----------------- FOOTER ----------------- */
+
+.footer {
+  border-top: solid 1px grey;
+  padding: 4rem 0 2rem 0;
+}
+
+.social-media-container-footer {
+  display: flex;
+  gap: 2rem;
+}
+
+.social-media-icon-footer {
+  color: var(--main-text-color);
+  font-size: 4rem;
+}
+
+.footer-logo {
+  width: 12rem;
+  border-radius: 20px;
+}
+
+.copyright-text {
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 0.15rem;
 }

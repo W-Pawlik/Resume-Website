@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wojciech Pawlik CV</title>
 
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
     <script defer src="./resources/js/index.js"></script>
     <link rel="icon" type="image/x-icon" href="./resources/images/prof.jpg" />
 
@@ -43,10 +47,16 @@
           <li class="nav-item">
             <a href="#about-me-section" class="nav-link">About me</a>
           </li>
-          <li class="nav-item"><a href="#" class="nav-link">My stack</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Projects</a></li>
           <li class="nav-item">
-            <a href="#" class="nav-link nav-contact">Contact me</a>
+            <a href="#courses-section" class="nav-link">My courses</a>
+          </li>
+          <li class="nav-item">
+            <a href="#section-my-projects" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact-me-section" class="nav-link nav-contact"
+              >Contact me</a
+            >
           </li>
         </ul>
       </nav>
@@ -56,7 +66,7 @@
       </button>
     </header>
     <main>
-      <section class="section-prime">
+      <section class="section-prime" id="section-prime">
         <div class="prime">
           <div class="prime-text-container">
             <h1 class="heading-primary">
@@ -66,10 +76,14 @@
               I am 🤓 beginner full-stack developer 💻 and it's nice to meet
               you! I am very happy that I can tell you something about me 😁
             </p>
-            <a href="#" class="btn btn--full margin-right-sm">Meet me &darr;</a>
-            <a href="#" class="btn btn--outline">Contact me</a>
+            <a href="#about-me-section" class="btn btn--full margin-right-sm"
+              >Meet me &darr;</a
+            >
+            <a href="#contact-me-section" class="btn btn--outline"
+              >Contact me</a
+            >
             <div class="social-media-container">
-              <a href="#" class="social-media-icon"
+              <a href="#https://github.com/W-Pawlik" class="social-media-icon"
                 ><i class="fa-brands fa-github"></i
               ></a>
               <a href="#" class="social-media-icon"
@@ -93,7 +107,7 @@
         </div>
       </section>
 
-      <section class="about-me-section">
+      <section class="about-me-section" id="about-me-section">
         <div class="container grid grid--2-cols">
           <div class="about-me-img-cointainer">
             <img
@@ -146,7 +160,7 @@
         </div>
       </section>
 
-      <section class="courses-section">
+      <section class="courses-section" id="courses-section">
         <div class="container">
           <span class="subheading">Courses</span>
           <h2 class="heading-secondary">My courses that I passed</h2>
@@ -198,7 +212,7 @@
         </div>
       </section>
 
-      <section class="section-my-projects">
+      <section class="section-my-projects" id="section-my-projects">
         <div class="container">
           <span class="subheading">Wait, what are you even coding?</span>
           <h2 class="heading-secondary">
@@ -296,7 +310,7 @@
         </div>
       </section>
 
-      <section class="contact-me-section">
+      <section class="contact-me-section" id="contact-me-section">
         <div class="container">
           <span class="subheading">How can you contact me?</span>
           <h2 class="heading-secondary">

@@ -35,7 +35,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: var(--section-background);
-  height: 12rem;
+  height: 10rem;
   padding: 0 4.8rem;
   -webkit-box-shadow: inset -3px -32px 100px -30px rgba(62, 7, 118, 1);
   -moz-box-shadow: inset -3px -32px 100px -30px rgba(62, 7, 118, 1);
@@ -44,7 +44,7 @@ body {
 }
 
 .logo {
-  height: 12rem;
+  height: 8rem;
   border-radius: 4rem;
 }
 
@@ -104,6 +104,24 @@ body {
 .icon-mobile-nav[name="close-outline"] {
   /* display: none; */
   opacity: 0;
+}
+
+/* ----------------- STICKY NAVIGATION ----------------- */
+
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #000000dc;
+  height: 10rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  z-index: 9999;
+}
+
+.sticky .section-prime {
+  margin-top: 10rem;
 }
 
 /* ----------------- PRIME SCETION ----------------- */

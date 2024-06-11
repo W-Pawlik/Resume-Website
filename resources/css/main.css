@@ -205,6 +205,7 @@ body {
 .about-me-img {
   height: 50rem;
   border-radius: 10rem;
+  opacity: 1;
 }
 
 .heading-secondary-about-me {
@@ -218,6 +219,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: all 2s, opacity 3s ease, transform 1s ease;
 }
 
 .download-cv-btn {
@@ -286,7 +288,6 @@ body {
   transform: translate(-50%, -50%) scale(0);
   width: 50rem;
 
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -295,30 +296,29 @@ body {
   padding: 2rem;
   border-radius: 8px;
   text-align: justify;
-
 }
 
-.pop-up-top{
+.pop-up-top {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
   width: 100%;
 }
 
-.close-btn{
+.close-btn {
   font-size: 2rem;
   cursor: pointer;
 }
 
-.close-btn:hover{
+.close-btn:hover {
   color: #454444;
 }
 
-.close-btn:active{
+.close-btn:active {
   color: #383838;
 }
 
-.heading-primary.pop-up-title{
+.heading-primary.pop-up-title {
   margin-bottom: 0;
   width: 100%;
   text-align: center;
@@ -332,16 +332,15 @@ body {
 .pop-up.open {
   z-index: 999;
   transform: translate(-50%, -50%) scale(1);
-
 }
 
-.overlay{
+.overlay {
   position: fixed;
   top: 0;
-  left:0;
+  left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
   pointer-events: none;
   -webkit-backdrop-filter: blur(10px);
@@ -358,13 +357,14 @@ body {
 
 .courses-section {
   padding: 9.6rem 0;
+  transition: all 2s ease;
 }
 
 .course-card {
   border-radius: 4rem;
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.3);
   overflow: hidden;
-  transition: all 0.4s;
+  transition: all 0.4s, opacity 1s ease, transform 1s ease;
 }
 
 .course-card:hover {
@@ -405,6 +405,7 @@ body {
 .project-img {
   width: 80%;
   border-radius: 1rem;
+  transition: all 2s, opacity 3s ease, transform 1s ease;
 }
 
 .project-img-container {
@@ -496,6 +497,8 @@ body {
   );
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.3);
   border-radius: 1rem;
+  transform: scale(1);
+  transition: all 1s ease;
 }
 
 .contact-me-text-container {

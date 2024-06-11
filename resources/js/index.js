@@ -63,75 +63,84 @@ const observer = new IntersectionObserver(
 );
 observer.observe(sectionPrimeEl);
 
-
-// MY STACK POP UPS
+// MY STACK POP UPS, DATA FROM MYSTACK.JSON
 
 const popUpEl = document.querySelector('.pop-up');
 const popUpOpenerEl = document.querySelectorAll('.pop-up-opener');
-const overlayEl = document.querySelector('.overlay')
-const closeBtnPopUpEl = document.querySelector('.close-btn')
+const overlayEl = document.querySelector('.overlay');
+const closeBtnPopUpEl = document.querySelector('.close-btn');
 
-
-popUpOpenerEl.forEach(function(popup){
-  popup.addEventListener("click", (e) => {
-    popUpEl.classList.add("open");
-    overlayEl.classList.add('active')
-    console.log(popup)
+popUpOpenerEl.forEach(function (popup) {
+  popup.addEventListener('click', e => {
+    popUpEl.classList.add('open');
+    overlayEl.classList.add('active');
+    console.log(popup);
 
     const popupId = e.target.id;
-    console.log(popupId)
+    console.log(popupId);
 
-    fetch('./resources/data/myStack.json').then(function(response){
-      return response.json();
-    }).then(function(listOfStack){
-      console.log(listOfStack)
-      const placeholder = document.querySelector('.pop-up');
-    
-      let out = "";
-      for(let stack of listOfStack){
-        console.log(stack.id)
-        if (popupId === stack.id.toString()){
-          console.log(`hej ${stack.id} ${stack.title}`)
-          out += `
+    fetch('./resources/data/myStack.json')
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (listOfStack) {
+        console.log(listOfStack);
+        const placeholder = document.querySelector('.pop-up');
+
+        let out = '';
+        for (let stack of listOfStack) {
+          console.log(stack.id);
+          if (popupId === stack.id.toString()) {
+            console.log(`hej ${stack.id} ${stack.title}`);
+            out += `
           <div class="pop-up-top">
           <h2 class="heading-primary pop-up-title">${stack.title}</h2>
           <i class="fa-solid fa-xmark close-btn"></i>
         </div>
        
         <p class="pop-up-description">${stack.description}</p>
-          `
-          placeholder.innerHTML = out;
-          break;
-        } 
-      
+          `;
+            placeholder.innerHTML = out;
+            break;
+          }
         }
+      });
+  });
+});
 
-        // console.log(stack.title)
-        // console.log(stack.description)
-      //   out += `
-      //   <div class="pop-up-top">
-      //   <h2 class="heading-primary pop-up-title">${stack.title}</h2>
-      //   <i class="fa-solid fa-xmark close-btn"></i>
-      // </div>
-     
-      // <p class="pop-up-description">${stack.description}</p>
-      //   `
-      // }
-    
-      // placeholder.innerHTML = out;
-    })
-  })
-})
+const closePopUp = () => {
+  popUpEl.classList.remove('open');
+  overlayEl.classList.remove('active');
+};
 
+overlayEl.addEventListener('click', closePopUp);
+closeBtnPopUpEl.addEventListener('click', closePopUp);
 
-const closePopUp = () =>{
-  popUpEl.classList.remove("open")
-  overlayEl.classList.remove('active')
-}
+const createObserver = (selector, rootMargin, showClass) => {
+  return new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add(showClass);
+          entry.target.classList.remove(selector);
+        }
+      });
+    },
+    {
+      rootMargin: rootMargin,
+    }
+  );
+};
 
-overlayEl.addEventListener('click', closePopUp)
-closeBtnPopUpEl.addEventListener('click',closePopUp)
+const observers = [
+  { selector: 'hidden-bottom', rootMargin: '400px', showClass: 'show-bottom' },
+  { selector: 'hidden-right', rootMargin: '-400px', showClass: 'show-right' },
+  { selector: 'hidden-left', rootMargin: '-400px', showClass: 'show-left' },
+  { selector: 'hidden-scale', rootMargin: '-400px', showClass: 'show-left' },
+];
 
-// MY STACK DATA
-
-
+observers.forEach(({ selector, rootMargin, showClass }) => {
+  const observer = createObserver(selector, rootMargin, showClass);
+  const elements = document.querySelectorAll(`.${selector}`);
+  elements.forEach(el => observer.observe(el));
+});
